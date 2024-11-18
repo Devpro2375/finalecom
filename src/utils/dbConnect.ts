@@ -31,13 +31,9 @@ async function dbConnect(): Promise<Mongoose> {
   }
 
   if (!cached.promise) {
-    const opts = {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    };
-
+    // You can pass an empty object for options as Mongoose handles it automatically
     cached.promise = mongoose
-      .connect(MONGODB_URI, opts)
+      .connect(MONGODB_URI, {})  // Pass an empty object instead of options
       .then((mongoose) => mongoose);
   }
 
