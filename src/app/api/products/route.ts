@@ -9,12 +9,12 @@ type Data = {
   message?: string;
 };
 
-// Ensure the database connection is established
-await dbConnect();
-
 // **GET** - Fetch all products or filter by query parameters
 export async function GET(req: NextRequest) {
   try {
+    // Ensure the database connection is established here
+    await dbConnect();
+
     const { searchParams } = new URL(req.url);
     const type = searchParams.get("type");
     const gender = searchParams.get("gender");
@@ -42,6 +42,9 @@ export async function GET(req: NextRequest) {
 // **POST** - Add a new product
 export async function POST(req: NextRequest) {
   try {
+    // Ensure the database connection is established here
+    await dbConnect();
+
     const body = await req.json();
     const product = await Product.create(body);
     return NextResponse.json({ success: true, data: product }, { status: 201 });
@@ -56,6 +59,9 @@ export async function POST(req: NextRequest) {
 // **PUT** - Update a product by ID
 export async function PUT(req: NextRequest) {
   try {
+    // Ensure the database connection is established here
+    await dbConnect();
+
     const { searchParams } = new URL(req.url);
     const id = searchParams.get("id");
     if (!id) {
@@ -90,6 +96,9 @@ export async function PUT(req: NextRequest) {
 // **DELETE** - Delete a product by ID
 export async function DELETE(req: NextRequest) {
   try {
+    // Ensure the database connection is established here
+    await dbConnect();
+
     const { searchParams } = new URL(req.url);
     const id = searchParams.get("id");
     if (!id) {
