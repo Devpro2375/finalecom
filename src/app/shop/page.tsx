@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import ShopBreadCrumb1 from "@/components/Shop/ShopBreadCrumb1";
 import Breadcrumb from "@/components/Home/Heading";
+import Loading from "@/components/Other/Loading";
 
 interface Product {
   id: string;
@@ -81,7 +82,7 @@ export default function BreadCrumb1() {
     <>
       <Breadcrumb heading="Shop" subHeading="Shop" />
       {loading ? (
-        <p>Loading...</p>
+        <Loading />
       ) : (
         <ShopBreadCrumb1
           data={products}

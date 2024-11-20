@@ -241,7 +241,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({
                 <div className="heading6">Products Type</div>
                 <div className="list-type mt-4">
                   {[
-                    "t-shirt",
+                    "DSLR Cameras",
                     "dress",
                     "top",
                     "swimwear",
@@ -266,7 +266,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({
                           data.filter(
                             (dataItem) =>
                               dataItem.type === item &&
-                              dataItem.category === "fashion"
+                              dataItem.category === "camera"
                           ).length
                         }
                         )

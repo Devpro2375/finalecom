@@ -59,7 +59,7 @@ const Deal = () => {
             </div>
           </div>
           <a
-            href="/shop/breadcrumb-img"
+            href="/shop"
             className="text-button pb-1 border-b-2 border-black"
           >
             View All Deals

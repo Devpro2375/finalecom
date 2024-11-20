@@ -2,7 +2,6 @@ import blogData from "@/data/Blog.json";
 import productData from "@/data/Product.json";
 import ModalNewsletter from "@/components/Modal/ModalNewsletter";
 
-
 import SliderMarketplace from "@/components/Home/Slider";
 import BannerAbove from "@/components/Home/BannerAbove";
 import Deal from "@/components/Home/Deal";
@@ -18,10 +17,7 @@ import Brand from "@/components/Home/Brand";
 export default function Home() {
   return (
     <>
-
-
       <div id="header" className="relative w-full">
-
         <SliderMarketplace />
       </div>
       <BannerAbove />

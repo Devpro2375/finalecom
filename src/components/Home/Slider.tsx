@@ -28,7 +28,7 @@ const SliderMarketplace = () => {
                   </div>
                   <div className="sub-img absolute top-0 left-0 w-full h-full">
                     <Image
-                      src="/images/slider/marketplace.png"
+                      src="/images/slider/marketplace.jpg"
                       width={5000}
                       height={4000}
                       alt="marketplace"
