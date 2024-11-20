@@ -11,6 +11,7 @@ import { countdownTime } from "@/store/countdownTime";
 import ShopMainMenu from "@/components/Shop/ShopMainMenu";
 import TopNavOne from "@/components/Home/TopNavOne";
 import Footer from "@/components/Home/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const serverTimeLeft: CountdownTimeType = countdownTime();
 
